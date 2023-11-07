@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  title: Product service
+  description: Codegen for product service
+  version: 1.0.0
+host: www
+schemes:
+  - https
+
+tags:
+  - name: Product service endpoints
+
+paths:
+  /info:
+    get:
+      tags:
+        - product
+      summary: About product service
+      responses:
+        '200':
+          description: Ok
+          schema:
+              $ref: '#/definitions/InfoCM'
+  
+
+definitions:
+  InfoCM:
+    type: object
+    properties:
+      about:
+        type: string
